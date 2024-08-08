@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+
 // Icons
 import { HiHome } from "react-icons/hi";
 import { PiUserFill } from "react-icons/pi";
@@ -11,7 +13,7 @@ const Navbar = () => {
     <nav className="w-[16.5%] h-dvh flex justify-center items-center fixed z-9999 bg-transparent">
       <ul className="flex flex-col items-center justify-center w-auto py-4 px-3 space-y-12  rounded-full h-[40%] bg-neutral-900">
         <li className="relative group">
-          <Link href="#header">
+          <Link href="#home">
             <HiHome
               size={iconSize}
               className="bg-neutral-900 hover:scale-110 duration-200 ease-in"
@@ -22,7 +24,7 @@ const Navbar = () => {
           </div>
         </li>
         <li className="relative group">
-          <Link href="/">
+          <Link href="#about">
             <PiUserFill
               size={iconSize}
               className="bg-neutral-900 hover:scale-110 duration-200 ease-in"
