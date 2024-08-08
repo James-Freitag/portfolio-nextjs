@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  background-color: black;
+  color: rgb(238, 238, 238);
+}
+
+html {
+  scroll-behavior: smooth;
+}
