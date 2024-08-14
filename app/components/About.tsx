@@ -1,10 +1,22 @@
 "use client";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import Image from "next/image";
 import profilePic from "../../public/me.jpg";
 
 const About = () => {
-  const fadeAnimationVariant = {
+  const name = "James";
+  const nameAnimationVariant = {
+    initial: {
+      y: -10,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const fadeSkillsAnimationVariant = {
     initial: {
       opacity: 0,
       x: -200,
@@ -22,12 +34,12 @@ const About = () => {
     "Javascript",
     "HTML",
     "CSS",
-    "Typescript",
+    "Git",
     "Next.js",
     "React",
     "Tailwind",
     "Node.js",
-    "Git",
+    "Typescript",
     "Remix.js",
     "Framer Motion",
     "Bootstrap",
@@ -35,16 +47,35 @@ const About = () => {
   return (
     <section
       id="about"
-      className="h-dvh pt-20 w-full flex flex-col items-center"
+      className="h-full pt-16 w-full flex flex-col items-center"
     >
       <div className="w-[65%] py-3 px-4 bg-neutral-950 border-[1px] border-gray-400">
         <h2 className="text-3xl p-2 bg-neutral-950 text-sky-400 pb-12">
-          This is me.
+          - This is me -
         </h2>
-        <div className="w-3/4 grid grid-cols-2 mx-auto justify-evenly bg-neutral-950">
-          <p className="place-self-center leading-relaxed tracking-wide bg-neutral-950 p-4">
-            Hi, my name is <span className="text-sky-400">James Freitag</span>.
-            I am a self taught front end developer. I have been a
+        <div className="w-3/4 grid grid-cols-1 lg:grid-cols-2 mx-auto justify-evenly bg-neutral-950">
+          <p className="place-self-center text-md leading-relaxed tracking-wide bg-neutral-950 p-4">
+            Hi, my name is{" "}
+            <span>
+              {name.split("").map((l, i) => {
+                return (
+                  <motion.span
+                    variants={nameAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    transition={{
+                      delay: 0.3 * i,
+                    }}
+                    viewport={{ once: true }}
+                    className="text-sky-400 inline-block"
+                    key={i}
+                  >
+                    {l}
+                  </motion.span>
+                );
+              })}
+            </span>
+            . I am a self taught front end developer. I have been a
             maintenance/handyman for 10+ years. So I guess I'm just switching
             from building material things to building coding things! I've been
             learning for the last 1.5 years using my tech stack - below. I've
@@ -58,7 +89,7 @@ const About = () => {
             a good challenge. I know I'm new and my challenges right now are on
             the junior side of this career, but the satisfaction of figuring
             something out without a straight forward tutorial is the best
-            feeling. Thanks for visiting and I would love to talk!
+            feeling. Thanks for visiting and I would love to talk!{" "}
           </p>
           <div className="p-4 bg-neutral-950">
             <Image
@@ -75,7 +106,7 @@ const About = () => {
               <motion.li
                 className="bg-neutral-900 rounded-lg py-1 px-2 text-lg"
                 key={index}
-                variants={fadeAnimationVariant}
+                variants={fadeSkillsAnimationVariant}
                 initial="initial"
                 whileInView="animate"
                 viewport={{

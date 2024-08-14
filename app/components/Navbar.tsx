@@ -10,7 +10,7 @@ import { FaFolder } from "react-icons/fa";
 const Navbar = () => {
   const iconSize = 35;
   return (
-    <nav className="w-[16.5%] h-dvh flex justify-center items-center fixed z-9999 bg-transparent">
+    <nav className="w-[16.5%] h-dvh lg:flex justify-center items-center fixed z-9999 bg-transparent hidden">
       <ul className="flex flex-col items-center justify-center w-auto py-4 px-3 space-y-12  rounded-full h-[40%] bg-neutral-900">
         <li className="relative group">
           <Link href="#home">
@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
         </li>
         <li className="relative group">
-          <Link href="/">
+          <Link href="#projects">
             <FaFolder
               size={iconSize}
               className="bg-neutral-900 hover:scale-110 duration-200 ease-in"
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
         </li>
         <li className="relative group">
-          <Link href="/">
+          <Link href="#contact">
             <MdOutlineConnectWithoutContact
               size={iconSize}
               className="bg-neutral-900 hover:scale-110 duration-200 ease-in"
