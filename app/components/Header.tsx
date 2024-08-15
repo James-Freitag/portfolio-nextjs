@@ -1,11 +1,11 @@
 const Header = () => {
   return (
-    <header id="home">
-      <div className="h-dvh w-auto lg:w-[81.5rem] flex flex-col justify-center px-4">
-        <p className="text-sm md:text-md lg:text-lg text-center lg:text-left tracking-wide pl-1">
+    <header className="w-full " id="home">
+      <div className="h-[50dvh] w-[65%] lg:h-dvh lg:w-[81.5rem] flex flex-col mx-auto justify-center px-4">
+        <p className="text-sm md:pb-0 md:text-md lg:text-lg text-left tracking-wide pl-1 lg:pl-16">
           James Freitag
         </p>
-        <h1 className=" text-5xl md:text-7xl lg:text-[8rem] w-full text-center lg:text-left text-sky-400 whitespace-nowrap leading-[5.5rem]">
+        <h1 className="leading-none w-full text-left lg:text-center text-sky-400 md:leading-[6rem] lg:leading-[5.5rem]">
           Front End Developer
         </h1>
       </div>
