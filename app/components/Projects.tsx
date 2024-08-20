@@ -1,9 +1,10 @@
 "use client";
 import { animate, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 // Project Screenshots
 import orioleScreenshot from "../../public/oriole-screenshot.png";
-import Link from "next/link";
+import harrypotterScreenshot from "../../public/harrypotter-screenshot.png";
 
 const fadeLeftToRight = {
   initial: {
@@ -51,7 +52,7 @@ const Projects = () => {
           - Projects -
         </h3>
         <div className="flex justify-center items-center pb-12">
-          <div className="grid w-full box-border md:w-3/4 grid-cols-1 md:grid-cols-3 md:pt-16 gap-2">
+          <div className="grid w-full box-border md:w-3/4 grid-cols-1 md:grid-cols-5 md:pt-16 gap-2">
             <motion.div
               variants={fadeLeftToRight}
               initial="initial"
@@ -61,14 +62,15 @@ const Projects = () => {
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto rounded-lg md:col-span-2 py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
+              className="w-full h-auto rounded-lg md:col-span-3 py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
             >
-              <p className="text-center md:text-left pb-2 md:pb-0">Project 1</p>
-              <div className="h-auto w-full rounded-lg">
+              <p className="text-center md:text-left pb-2 md:pb-0">Oriole</p>
+              <div className="h-auto w-full rounded-lg flex justify-center items-center">
                 <Image
                   src={orioleScreenshot}
                   alt="screenshot"
-                  className="w-full object-cover rounded-lg"
+                  className="w-[18.75] object-cover rounded-lg"
+                  width={300}
                 />
               </div>
               <div className="flex justify-evenly items-center pt-2 w-full py-1">
@@ -101,14 +103,37 @@ const Projects = () => {
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
+              className="w-full h-auto py-3 px-4 col-span-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400 flex flex-col justify-evenly items-center"
             >
-              <p className="text-center md:text-left pb-2 md:pb-0">Project 2</p>
-              <div className="h-auto w-full px-4 bg-blue-700 rounded-lg"></div>
-              <div className="flex justify-evenly items-center w-full pt-2 py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">Code</button>
+              <p className="text-center w-full md:text-left pb-2 md:pb-0">
+                Cards
+              </p>
+              <div className="h-auto flex justify-center items-center w-full rounded-lg">
+                <Image
+                  src={harrypotterScreenshot}
+                  alt="screenshot"
+                  width={300}
+                  className="object-cover bg-neutral-950 h-[196px] w-[300px]  rounded-lg"
+                />
+              </div>
+              <div className="flex justify-evenly pt-2 w-full py-1">
                 <button className="bg-neutral-800 rounded-lg px-2">
-                  Preview
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://github.com/James-Freitag/unsplash-potter/blob/master/app/routes/_index.tsx"
+                  >
+                    Code
+                  </Link>
+                </button>
+                <button className="bg-neutral-800 rounded-lg px-2">
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://master--cool-gumption-d00653.netlify.app/"
+                  >
+                    Preview
+                  </Link>
                 </button>
               </div>
             </motion.div>
@@ -121,7 +146,7 @@ const Projects = () => {
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 md:row-start-2 col-span-1 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
+              className="w-full h-auto py-3 px-4 md:row-start-2 col-span-2 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
             >
               <p className="text-center md:text-left pb-2 md:pb-0">Project 3</p>
               <div className="h-auto w-full px-4 bg-blue-300 rounded-lg"></div>
@@ -141,7 +166,7 @@ const Projects = () => {
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 md:col-span-2 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
+              className="w-full h-auto py-3 px-4 md:col-span-3 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
             >
               <p className="text-center md:text-left pb-2 md:pb-0">Project 4</p>
               <div className="h-auto w-full px-4 bg-blue-900 rounded-lg"></div>
