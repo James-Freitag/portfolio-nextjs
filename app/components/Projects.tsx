@@ -5,6 +5,7 @@ import Link from "next/link";
 // Project Screenshots
 import orioleScreenshot from "../../public/oriole-screenshot.png";
 import harrypotterScreenshot from "../../public/harrypotter-screenshot.png";
+import sortingHatScreenshot from "../../public/sortinghat-screenshot.png";
 
 const fadeLeftToRight = {
   initial: {
@@ -69,7 +70,7 @@ const Projects = () => {
                 <Image
                   src={orioleScreenshot}
                   alt="screenshot"
-                  className="w-[18.75] object-cover rounded-lg"
+                  className="w-[18.75rem] object-cover rounded-lg"
                   width={300}
                 />
               </div>
@@ -87,7 +88,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://master--cool-gumption-d00653.netlify.app/"
+                    href="https://oriole-clone.netlify.app/"
                   >
                     Preview
                   </Link>
@@ -168,12 +169,35 @@ const Projects = () => {
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto py-3 px-4 md:col-span-3 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
             >
-              <p className="text-center md:text-left pb-2 md:pb-0">Project 4</p>
-              <div className="h-auto w-full px-4 bg-blue-900 rounded-lg"></div>
-              <div className="flex justify-evenly items-center w-full pt-2 py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">Code</button>
+              <p className="text-center md:text-left pb-2 md:pb-0">
+                Sorting Hat
+              </p>
+              <div className="h-auto w-full rounded-lg flex justify-center items-center">
+                <Image
+                  src={sortingHatScreenshot}
+                  alt="screenshot"
+                  className="w-[300px] h-[196px] object-cover rounded-lg"
+                  width={300}
+                />
+              </div>
+              <div className="flex justify-evenly items-center pt-2 w-full py-1">
                 <button className="bg-neutral-800 rounded-lg px-2">
-                  Preview
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://github.com/James-Freitag/orioloe-clone"
+                  >
+                    Code
+                  </Link>
+                </button>
+                <button className="bg-neutral-800 rounded-lg px-2">
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://master--cool-gumption-d00653.netlify.app/"
+                  >
+                    Preview
+                  </Link>
                 </button>
               </div>
             </motion.div>
