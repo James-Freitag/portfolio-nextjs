@@ -1,5 +1,9 @@
 "use client";
 import { animate, motion } from "framer-motion";
+import Image from "next/image";
+// Project Screenshots
+import orioleScreenshot from "../../public/oriole-screenshot.png";
+import Link from "next/link";
 
 const fadeLeftToRight = {
   initial: {
@@ -60,11 +64,31 @@ const Projects = () => {
               className="w-full h-auto rounded-lg md:col-span-2 py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
             >
               <p className="text-center md:text-left pb-2 md:pb-0">Project 1</p>
-              <div className="h-auto w-full px-4 bg-blue-500 rounded-lg"></div>
+              <div className="h-auto w-full rounded-lg">
+                <Image
+                  src={orioleScreenshot}
+                  alt="screenshot"
+                  className="w-full object-cover rounded-lg"
+                />
+              </div>
               <div className="flex justify-evenly items-center pt-2 w-full py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">Code</button>
                 <button className="bg-neutral-800 rounded-lg px-2">
-                  Preview
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://github.com/James-Freitag/orioloe-clone"
+                  >
+                    Code
+                  </Link>
+                </button>
+                <button className="bg-neutral-800 rounded-lg px-2">
+                  <Link
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://master--cool-gumption-d00653.netlify.app/"
+                  >
+                    Preview
+                  </Link>
                 </button>
               </div>
             </motion.div>
