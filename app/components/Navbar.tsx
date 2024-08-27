@@ -19,10 +19,10 @@ const Navbar = () => {
 
   const iconSize = 35;
   return (
-    <nav className="w-full h-screen lg:w-[16.5%] lg:h-dvh flex justify-center items-center fixed z-9999 bg-transparent">
+    <nav className="w-full  lg:h-screen lg:w-[16.5%] md:flex justify-center items-center fixed  bg-transparent">
       <ul className="flex-col hidden lg:flex items-center justify-center w-auto py-4 px-3 space-y-12  rounded-full h-[40%] bg-neutral-900">
         <li className="relative group">
-          <Link href="#home">
+          <Link href="/">
             <HiHome
               size={iconSize}
               className="bg-neutral-900 hover:scale-110 duration-200 ease-in"

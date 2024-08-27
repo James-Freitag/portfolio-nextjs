@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header className="w-full " id="home">
-      <div className="h-[50dvh] w-[65%] lg:h-dvh lg:w-[81.5rem] flex flex-col mx-auto justify-center px-4">
+      <div className="h-[50dvh] w-[65%] lg:h-dvh lg:max-w-[81.5rem] flex flex-col mx-auto justify-center px-4">
         <p className="text-sm md:pb-0 md:text-md lg:text-lg text-left tracking-wide pl-1 lg:pl-16">
           James Freitag
         </p>

@@ -57,7 +57,7 @@ const Contact = () => {
               <p className="bg-neutral-950">jamesfreitag05@gmail.com</p>
             </div>
           </div>
-          <div className="flex flex-col space-y-2 items-center p-4 bg-neutral-950">
+          <div className="flex md:flex-col justify-center space-y-2 items-center p-4 bg-neutral-950">
             <ul className="flex md:flex-col justify-center items-center space-x-6 md:space-x-0 md:space-y-6 bg-neutral-950">
               <li className="bg-neutral-950 hover:scale-105">
                 <Link
@@ -84,7 +84,7 @@ const Contact = () => {
           </div>
           <Link
             href="#home"
-            className="md:col-span-2 z-[0] pt-8 place-items-center mx-auto animate-bounce bg-neutral-950"
+            className="md:col-span-2 pt-8 place-items-center mx-auto animate-bounce bg-neutral-950"
           >
             <IoIosArrowUp
               size={iconSize}
@@ -93,8 +93,11 @@ const Contact = () => {
           </Link>
         </div>
       </motion.div>
-      <div className="flex justify-center items-center h-full pt-12 w-full mx-auto">
+      <div className="flex justify-center items-center gap-4 h-full pt-12 w-full mx-auto">
         <p className="text-white/25 text-center">&copy;JamesFreitag 2024</p>
+        <p className="text-sky-400 animate-pulse">
+          <Link href="resume">My Resume</Link>
+        </p>
       </div>
     </footer>
   );

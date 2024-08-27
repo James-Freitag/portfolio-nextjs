@@ -6,6 +6,7 @@ import Link from "next/link";
 import orioleScreenshot from "../../public/oriole-screenshot.png";
 import harrypotterScreenshot from "../../public/harrypotter-screenshot.png";
 import sortingHatScreenshot from "../../public/sortinghat-screenshot.png";
+import pricingApp from "../../public/pricing-homepage.png";
 
 const fadeLeftToRight = {
   initial: {
@@ -149,8 +150,17 @@ const Projects = () => {
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto py-3 px-4 md:row-start-2 col-span-2 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
             >
-              <p className="text-center md:text-left pb-2 md:pb-0">Project 3</p>
-              <div className="h-auto w-full px-4 bg-blue-300 rounded-lg"></div>
+              <p className="text-center w-full md:text-left pb-2 md:pb-0">
+                Pricing App
+              </p>
+              <div className="h-auto flex justify-center items-center w-full rounded-lg">
+                <Image
+                  src={pricingApp}
+                  alt="screenshot"
+                  width={300}
+                  className="object-cover bg-neutral-950 h-[196px] w-[300px]  rounded-lg"
+                />
+              </div>
               <div className="flex justify-evenly items-center w-full py-1 pt-2">
                 <button className="bg-neutral-800 rounded-lg px-2">Code</button>
                 <button className="bg-neutral-800 rounded-lg px-2">
