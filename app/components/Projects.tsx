@@ -89,7 +89,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://oriole-clone.netlify.app/"
+                    href="https://orioloe-clone.fly.dev"
                   >
                     Preview
                   </Link>
@@ -132,7 +132,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://master--cool-gumption-d00653.netlify.app/"
+                    href="https://unsplash-potter.fly.dev/"
                   >
                     Preview
                   </Link>
@@ -180,7 +180,7 @@ const Projects = () => {
               className="w-full h-auto py-3 px-4 md:col-span-3 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
             >
               <p className="text-center md:text-left pb-2 md:pb-0">
-                Sorting Hat
+                Sorting Hat - Work in progress
               </p>
               <div className="h-auto w-full rounded-lg flex justify-center items-center">
                 <Image
@@ -204,7 +204,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://master--cool-gumption-d00653.netlify.app/"
+                    href="https://sorting-hat-app.fly.dev"
                   >
                     Preview
                   </Link>

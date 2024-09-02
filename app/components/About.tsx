@@ -96,23 +96,26 @@ const About = () => {
             </span>
             . I am a self taught front end developer. I have been a
             maintenance/handyman for 10+ years. So I guess I just switched from
-            building material things to building coding things! I've been
-            learning for the last 1.5 years using my tech stack - below. I've
-            learned from various places -{" "}
-            <span className="text-sky-400 text-md md:text-lg">'ui.dev'</span>,{" "}
+            building material things to building coding things! I&apos;ve been
+            learning for the last 1.5 years using my tech stack - below.
+            I&apos;ve learned from various places -{" "}
             <span className="text-sky-400 text-md md:text-lg">
-              'Grokking Algorithms'
+              &apos;ui.dev&apos;
+            </span>
+            ,{" "}
+            <span className="text-sky-400 text-md md:text-lg">
+              &apos;Grokking Algorithms&apos;
             </span>
             , and{" "}
             <span className="text-sky-400 text-md md:text-lg">
-              'JavaScript from Beginner to Professional'
+              &apos;JavaScript from Beginner to Professional&apos;
             </span>{" "}
             plus others. I have an itch for learning new things and always love
-            a good challenge. I know I'm new and my challenges right now are on
-            the junior side of this career, but the satisfaction of figuring
-            something out without a straight forward tutorial is the best and
-            most rewarding feeling. Thanks for visiting and I would love to
-            talk!{" "}
+            a good challenge. I know I&apos;m new and my challenges right now
+            are on the junior side of this career, but the satisfaction of
+            figuring something out without a straight forward tutorial is the
+            best and most rewarding feeling. Thanks for visiting and I would
+            love to talk!{" "}
           </p>
           <div className="p-4 bg-neutral-950">
             <Image
