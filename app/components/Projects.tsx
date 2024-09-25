@@ -6,7 +6,7 @@ import Link from "next/link";
 import orioleScreenshot from "../../public/oriole-screenshot.png";
 import harrypotterScreenshot from "../../public/harrypotter-screenshot.png";
 import sortingHatScreenshot from "../../public/sortinghat-screenshot.png";
-import pricingApp from "../../public/pricing-homepage.png";
+import expenseTracker from "../../public/expense-tracker.png";
 
 const fadeLeftToRight = {
   initial: {
@@ -123,7 +123,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://github.com/James-Freitag/unsplash-potter/blob/master/app/routes/_index.tsx"
+                    href="https://github.com/James-Freitag/sorting-hat-app"
                   >
                     Code
                   </Link>
@@ -151,11 +151,11 @@ const Projects = () => {
               className="w-full h-auto py-3 px-4 md:row-start-2 col-span-2 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
             >
               <p className="text-center w-full md:text-left pb-2 md:pb-0">
-                Pricing App
+                Expense Tracker
               </p>
               <div className="h-auto flex justify-center items-center w-full rounded-lg">
                 <Image
-                  src={pricingApp}
+                  src={expenseTracker}
                   alt="screenshot"
                   width={300}
                   className="object-cover bg-neutral-950 h-[196px] w-[300px]  rounded-lg"
@@ -164,7 +164,9 @@ const Projects = () => {
               <div className="flex justify-evenly items-center w-full py-1 pt-2">
                 <button className="bg-neutral-800 rounded-lg px-2">Code</button>
                 <button className="bg-neutral-800 rounded-lg px-2">
-                  Preview
+                  <a href="https://app-divine-butterfly-5852.fly.dev/">
+                    Preview
+                  </a>
                 </button>
               </div>
             </motion.div>
@@ -195,7 +197,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     className="bg-neutral-800"
-                    href="https://github.com/James-Freitag/orioloe-clone"
+                    href="https://github.com/James-Freitag/sorting-hat-app"
                   >
                     Code
                   </Link>
