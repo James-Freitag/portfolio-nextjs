@@ -53,7 +53,7 @@ const Projects = () => {
         <h3 className="text-3xl text-center md:text-left text-sky-400  p-2">
           - Projects -
         </h3>
-        <div className="flex justify-center items-center pb-12">
+        <div className=" flex justify-center items-center pb-12">
           <div className="grid w-full box-border md:w-3/4 grid-cols-1 md:grid-cols-5 md:pt-16 gap-2">
             <motion.div
               variants={fadeLeftToRight}
@@ -62,7 +62,6 @@ const Projects = () => {
               viewport={{
                 once: true,
               }}
-              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto rounded-lg md:col-span-3 py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
             >
@@ -103,7 +102,6 @@ const Projects = () => {
               viewport={{
                 once: true,
               }}
-              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto py-3 px-4 col-span-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400 flex flex-col justify-evenly items-center"
             >
@@ -146,7 +144,6 @@ const Projects = () => {
               viewport={{
                 once: true,
               }}
-              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto py-3 px-4 md:row-start-2 col-span-2 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
             >
@@ -164,7 +161,11 @@ const Projects = () => {
               <div className="flex justify-evenly items-center w-full py-1 pt-2">
                 <button className="bg-neutral-800 rounded-lg px-2">Code</button>
                 <button className="bg-neutral-800 rounded-lg px-2">
-                  <a href="https://app-divine-butterfly-5852.fly.dev/">
+                  <a
+                    target="_blank"
+                    className="bg-neutral-800"
+                    href="https://app-divine-butterfly-5852.fly.dev/"
+                  >
                     Preview
                   </a>
                 </button>
@@ -177,7 +178,6 @@ const Projects = () => {
               viewport={{
                 once: true,
               }}
-              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 18 }}
               className="w-full h-auto py-3 px-4 md:col-span-3 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
             >

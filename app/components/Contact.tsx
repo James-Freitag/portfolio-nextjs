@@ -95,9 +95,14 @@ const Contact = () => {
       </motion.div>
       <div className="flex justify-center items-center gap-4 h-full pt-12 w-full mx-auto">
         <p className="text-white/25 text-center">&copy;JamesFreitag 2024</p>
-        <p className="text-sky-400 animate-pulse">
-          <Link href="resume">My Resume</Link>
-        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="Dev-Resume.pdf"
+          className="text-sky-400 animate-pulse"
+        >
+          My Resume
+        </a>
       </div>
     </footer>
   );
