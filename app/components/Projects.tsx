@@ -1,219 +1,94 @@
 "use client";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
 // Project Screenshots
 import orioleScreenshot from "../../public/oriole-screenshot.png";
-import harrypotterScreenshot from "../../public/harrypotter-screenshot.png";
+import feloniousGru from "../../public/gru-site.png";
 import sortingHatScreenshot from "../../public/sortinghat-screenshot.png";
-import expenseTracker from "../../public/expense-tracker.png";
+import hunterCodex from "../../public/hunter-codex.png";
 
-const fadeLeftToRight = {
-  initial: {
-    opacity: 0,
-    scale: 0.5,
-    x: -250,
-  },
-  animate: () => ({
+const fadeInVariant = {
+  initial: { opacity: 0, scale: 0.9, y: 30 },
+  animate: {
     opacity: 1,
     scale: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
-  }),
-};
-const fadeRightToLeft = {
-  initial: {
-    opacity: 0,
-    scale: 0.5,
-    x: 250,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
-  animate: () => ({
-    opacity: 1,
-    scale: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      delay: 0.8,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
-  }),
 };
+
+const projects = [
+  {
+    name: "Oriole",
+    image: orioleScreenshot,
+    code: "https://github.com/James-Freitag/orioloe-clone",
+    preview: "https://orioloe-clone.fly.dev",
+  },
+  {
+    name: "Felonious Gru",
+    image: feloniousGru,
+    code: "https://github.com/James-Freitag/felonious-gru/tree/master/src/app",
+    preview: "https://felonious-gru.fly.dev/",
+  },
+  {
+    name: "MH Wilds Codex",
+    image: hunterCodex,
+    code: "https://github.com/James-Freitag/hunters-codex/tree/main/src/app",
+    preview: "https://hunters-codex.fly.dev/",
+  },
+  {
+    name: "Diagon Alley",
+    image: sortingHatScreenshot,
+    code: "https://github.com/James-Freitag/diagon-alley/tree/master/src/app",
+    preview: "https://sorting-hat-app.fly.dev",
+  },
+];
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="h-full pt-16 w-full flex flex-col items-center"
-    >
-      <div className="w-[65%] py-3 px-4">
-        <h3 className="text-3xl text-center md:text-left text-sky-400  p-2">
-          - Projects -
-        </h3>
-        <div className=" flex justify-center items-center pb-12">
-          <div className="grid w-full box-border md:w-3/4 grid-cols-1 md:grid-cols-5 md:pt-16 gap-2">
+    <section id="projects" className="py-4 md:py-16 flex flex-col items-center">
+      <div className="w-full max-w-5xl px-6">
+        <h3 className="text-3xl text-center text-sky-400 pb-8">- Projects -</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
             <motion.div
-              variants={fadeLeftToRight}
+              key={index}
+              variants={fadeInVariant}
               initial="initial"
               whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto rounded-lg md:col-span-3 py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
+              viewport={{ once: true }}
+              className="bg-neutral-950 border border-gray-400 rounded-lg p-4 flex flex-col items-center"
             >
-              <p className="text-center md:text-left pb-2 md:pb-0">Oriole</p>
-              <div className="h-auto w-full rounded-lg flex justify-center items-center">
+              <p className="text-lg font-semibold mb-2">{project.name}</p>
+              <div className="w-full aspect-[16/9] rounded-lg overflow-hidden">
                 <Image
-                  src={orioleScreenshot}
-                  alt="screenshot"
-                  className="w-[18.75rem] object-cover rounded-lg"
+                  src={project.image}
+                  alt={`${project.name} screenshot`}
+                  className="w-full h-full object-cover"
                   width={300}
+                  height={200}
                 />
               </div>
-              <div className="flex justify-evenly items-center pt-2 w-full py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://github.com/James-Freitag/orioloe-clone"
-                  >
-                    Code
-                  </Link>
-                </button>
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://orioloe-clone.fly.dev"
-                  >
-                    Preview
-                  </Link>
-                </button>
+              <div className="flex justify-between w-full mt-4">
+                <Link
+                  href={project.code}
+                  target="_blank"
+                  className="bg-neutral-800 px-3 py-1 rounded-lg text-white hover:bg-neutral-700"
+                >
+                  Code
+                </Link>
+                <Link
+                  href={project.preview}
+                  target="_blank"
+                  className="bg-neutral-800 px-3 py-1 rounded-lg text-white hover:bg-neutral-700"
+                >
+                  Preview
+                </Link>
               </div>
             </motion.div>
-            <motion.div
-              variants={fadeRightToLeft}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 col-span-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400 flex flex-col justify-evenly items-center"
-            >
-              <p className="text-center w-full md:text-left pb-2 md:pb-0">
-                Cards
-              </p>
-              <div className="h-auto flex justify-center items-center w-full rounded-lg">
-                <Image
-                  src={harrypotterScreenshot}
-                  alt="screenshot"
-                  width={300}
-                  className="object-cover bg-neutral-950 h-[196px] w-[300px]  rounded-lg"
-                />
-              </div>
-              <div className="flex justify-evenly pt-2 w-full py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://github.com/James-Freitag/sorting-hat-app"
-                  >
-                    Code
-                  </Link>
-                </button>
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://unsplash-potter.fly.dev/"
-                  >
-                    Preview
-                  </Link>
-                </button>
-              </div>
-            </motion.div>
-            <motion.div
-              variants={fadeLeftToRight}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 md:row-start-2 col-span-2 rounded-lg bg-neutral-950 border-[1px] border-gray-400"
-            >
-              <p className="text-center w-full md:text-left pb-2 md:pb-0">
-                Expense Tracker
-              </p>
-              <div className="h-auto flex justify-center items-center w-full rounded-lg">
-                <Image
-                  src={expenseTracker}
-                  alt="screenshot"
-                  width={300}
-                  className="object-cover bg-neutral-950 h-[196px] w-[300px]  rounded-lg"
-                />
-              </div>
-              <div className="flex justify-evenly items-center w-full py-1 pt-2">
-                <button className="bg-neutral-800 rounded-lg px-2">Code</button>
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <a
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://app-divine-butterfly-5852.fly.dev/"
-                  >
-                    Preview
-                  </a>
-                </button>
-              </div>
-            </motion.div>
-            <motion.div
-              variants={fadeRightToLeft}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              transition={{ type: "spring", stiffness: 400, damping: 18 }}
-              className="w-full h-auto py-3 px-4 md:col-span-3 md:row-start-2 bg-neutral-950 rounded-lg border-[1px] border-gray-400"
-            >
-              <p className="text-center md:text-left pb-2 md:pb-0">
-                Sorting Hat - Work in progress
-              </p>
-              <div className="h-auto w-full rounded-lg flex justify-center items-center">
-                <Image
-                  src={sortingHatScreenshot}
-                  alt="screenshot"
-                  className="w-[300px] h-[196px] object-cover rounded-lg"
-                  width={300}
-                />
-              </div>
-              <div className="flex justify-evenly items-center pt-2 w-full py-1">
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://github.com/James-Freitag/sorting-hat-app"
-                  >
-                    Code
-                  </Link>
-                </button>
-                <button className="bg-neutral-800 rounded-lg px-2">
-                  <Link
-                    target="_blank"
-                    className="bg-neutral-800"
-                    href="https://sorting-hat-app.fly.dev"
-                  >
-                    Preview
-                  </Link>
-                </button>
-              </div>
-            </motion.div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

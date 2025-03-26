@@ -40,15 +40,12 @@ const About = () => {
     "Tailwind",
     "Node.js",
     "Typescript",
-    "Remix.js",
-    "Framer Motion",
+    "SQL",
+    "Framer",
     "Bootstrap",
   ];
   return (
-    <section
-      id="about"
-      className="h-full pt-16 w-full flex flex-col items-center"
-    >
+    <section id="about" className="py-4 md:pt-16 flex flex-col items-center">
       <motion.div
         variants={{
           initial: {
@@ -67,13 +64,13 @@ const About = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="w-[65%] py-3 px-4 bg-neutral-950 border-[1px] border-gray-400"
+        className="md:w-[65%] p-4 bg-neutral-950 border-y md:border-[1px] border-gray-400"
       >
         <h2 className="text-3xl text-center md:text-left p-2 bg-neutral-950 text-sky-400 md:pb-12">
           - This is me -
         </h2>
-        <div className="w-3/4 grid grid-cols-1 lg:grid-cols-2 mx-auto justify-evenly bg-neutral-950">
-          <p className="place-self-center text-sm md:text-md leading-relaxed tracking-wide bg-neutral-950 p-4">
+        <div className="md:w-3/4 grid grid-cols-1 lg:grid-cols-2 mx-auto justify-evenly items-center bg-neutral-950">
+          <p className="place-self-center text-md leading-relaxed tracking-wide bg-neutral-950 p-4">
             Hi, my name is{" "}
             <span>
               {name.split("").map((l, i) => {
@@ -94,11 +91,11 @@ const About = () => {
                 );
               })}
             </span>
-            . I am a self taught front end developer. I have been a
-            maintenance/handyman for 10+ years. So I guess I just switched from
-            building material things to building coding things! I&apos;ve been
-            learning for the last 1.5 years using my tech stack - below.
-            I&apos;ve learned from various places -{" "}
+            . I am a self taught front end developer. I have been a maintenance
+            & handyman for 10+ years. So I guess I just switched from building
+            material things to building coding things! I&apos;ve been learning
+            for the last 1.5 years using my tech stack - below. I&apos;ve
+            learned from various places -{" "}
             <span className="text-sky-400 text-md md:text-lg">
               &apos;ui.dev&apos;
             </span>
@@ -125,12 +122,12 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center bg-neutral-950 pb-4 px-2">
-          <p className="py-4 text-2xl bg-neutral-950">- My Skills -</p>
-          <ul className="grid grid-cols-3 lg:grid-cols-4 text-center gap-1 lg:gap-3 bg-neutral-950">
+        <div className="flex flex-col items-center bg-neutral-950 md:pb-4 md:px-2">
+          <p className="py-4 text-2xl">- My Skills -</p>
+          <ul className="grid grid-cols-2 lg:grid-cols-4 text-center gap-1 lg:gap-3 bg-neutral-950">
             {skills.map((skill, index) => (
               <motion.li
-                className="bg-neutral-900 rounded-lg py-1 px-2 text-sm md:text-md lg:text-lg"
+                className="bg-neutral-900 rounded-lg py-1 px-2 text-md lg:text-lg"
                 key={index}
                 variants={fadeSkillsAnimationVariant}
                 initial="initial"

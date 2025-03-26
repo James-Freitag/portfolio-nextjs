@@ -32,10 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <footer
-      id="contact"
-      className="h-full py-16 w-full flex flex-col items-center"
-    >
+    <footer id="contact" className="w-full md:py-16 flex flex-col items-center">
       <motion.div
         variants={fadeInVariant}
         whileInView="animate"
@@ -43,18 +40,18 @@ const Contact = () => {
         viewport={{
           once: true,
         }}
-        className="w-[65%] h-full pt-3 pb-16 px-4 bg-neutral-950 border-[1px] border-gray-400"
+        className="md:w-[65%] w-full h-full pt-3 pb-16 px-4 bg-neutral-950 border-y md:border border-gray-400"
       >
-        <h4 className="text-3xl p-2 text-center md:text-left bg-neutral-950 text-sky-400 pb-12">
+        <h4 className="text-3xl p-2 text-center md:text-left bg-neutral-950 text-sky-400 md:pb-12">
           - Contact Me -
         </h4>
-        <div className="w-3/4 h-auto grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto bg-neutral-950">
+        <div className="md:w-3/4 h-auto grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto bg-neutral-950">
           <div className="flex space-y-2 flex-col items-center p-4 bg-neutral-950">
             <div className="flex flex-col justify-center items-center space-y-4 bg-neutral-950">
-              <p className="bg-neutral-950">James Freitag</p>
-              <p className="bg-neutral-950">847-476-9849</p>
-              <p className="bg-neutral-950">Ingleside, IL</p>
-              <p className="bg-neutral-950">jamesfreitag05@gmail.com</p>
+              <p>James Freitag</p>
+              <p>847-476-9849</p>
+              <p>Ingleside, IL</p>
+              <p>jamesfreitag05@gmail.com</p>
             </div>
           </div>
           <div className="flex md:flex-col justify-center space-y-2 items-center p-4 bg-neutral-950">
@@ -84,7 +81,7 @@ const Contact = () => {
           </div>
           <Link
             href="#home"
-            className="md:col-span-2 pt-8 place-items-center mx-auto animate-bounce bg-neutral-950"
+            className="md:col-span-2 pt-8 place-items-center mx-auto animate-bounce"
           >
             <IoIosArrowUp
               size={iconSize}
@@ -93,7 +90,7 @@ const Contact = () => {
           </Link>
         </div>
       </motion.div>
-      <div className="flex justify-center items-center gap-4 h-full pt-12 w-full mx-auto">
+      <div className="flex justify-center items-center gap-4 h-full py-12 w-full mx-auto">
         <p className="text-white/25 text-center">&copy;JamesFreitag 2024</p>
         <a
           target="_blank"

@@ -1,13 +1,9 @@
 const Header = () => {
   return (
     <header className="w-full " id="home">
-      <div className="h-[50dvh] w-[65%] lg:h-dvh lg:max-w-[81.5rem] flex flex-col mx-auto justify-center px-4">
-        <p className="text-sm md:pb-0 md:text-md lg:text-lg text-left tracking-wide pl-1 lg:pl-16">
-          James Freitag
-        </p>
-        <h1 className="leading-none w-full text-left lg:text-center text-sky-400 md:leading-[6rem] lg:leading-[5.5rem]">
-          Front End Developer
-        </h1>
+      <div className="flex flex-col justify-center items-center mx-auto h-64 text-sky-400 w-full">
+        <p className="text-6xl md:text-8xl text-center">James Freitag</p>
+        <p className="text-4xl md:text-6xl text-center">Web Developer</p>
       </div>
     </header>
   );
