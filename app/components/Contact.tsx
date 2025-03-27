@@ -42,7 +42,7 @@ const Contact = () => {
         }}
         className="md:w-[65%] w-full h-full pt-3 pb-16 px-4 bg-neutral-950 border-y md:border border-gray-400"
       >
-        <h4 className="text-3xl p-2 text-center md:text-left bg-neutral-950 text-sky-400 md:pb-12">
+        <h4 className="text-3xl p-2 place-self-center text-center md:text-left bg-neutral-950 text-sky-400 md:pb-12">
           - Contact Me -
         </h4>
         <div className="md:w-3/4 h-auto grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto bg-neutral-950">
@@ -90,7 +90,7 @@ const Contact = () => {
           </Link>
         </div>
       </motion.div>
-      <div className="flex justify-center items-center gap-4 h-full py-12 w-full mx-auto">
+      <div className="flex justify-center items-center gap-4 h-full pt-12 pb-12 md:pb-0 w-full mx-auto">
         <p className="text-white/25 text-center">&copy;JamesFreitag 2024</p>
         <a
           target="_blank"

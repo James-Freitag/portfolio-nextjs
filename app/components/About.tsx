@@ -45,7 +45,10 @@ const About = () => {
     "Bootstrap",
   ];
   return (
-    <section id="about" className="py-4 md:pt-16 flex flex-col items-center">
+    <section
+      id="about"
+      className="py-4 md:pt-16 flex flex-col items-center justify-center"
+    >
       <motion.div
         variants={{
           initial: {
@@ -66,7 +69,7 @@ const About = () => {
         viewport={{ once: true }}
         className="md:w-[65%] p-4 bg-neutral-950 border-y md:border-[1px] border-gray-400"
       >
-        <h2 className="text-3xl text-center md:text-left p-2 bg-neutral-950 text-sky-400 md:pb-12">
+        <h2 className="text-3xl place-self-center text-center md:text-left p-2 bg-neutral-950 text-sky-400 md:pb-12">
           - This is me -
         </h2>
         <div className="md:w-3/4 grid grid-cols-1 lg:grid-cols-2 mx-auto justify-evenly items-center bg-neutral-950">
@@ -91,11 +94,12 @@ const About = () => {
                 );
               })}
             </span>
-            . I am a self taught front end developer. I have been a maintenance
-            & handyman for 10+ years. So I guess I just switched from building
-            material things to building coding things! I&apos;ve been learning
-            for the last 1.5 years using my tech stack - below. I&apos;ve
-            learned from various places -{" "}
+            . I am a self taught web developer. I&apos;ve been learning since
+            2023 with no career work experience...yet - Network Error 324 - is
+            all I have recieved. Jokes aside, my networking is my weak spot, as
+            a father of 2 beautiful children and wonderful wife take up a lot of
+            time outside of work & my career change. My tech stack - below
+            I&apos;ve learned from various places -{" "}
             <span className="text-sky-400 text-md md:text-lg">
               &apos;ui.dev&apos;
             </span>
@@ -108,11 +112,9 @@ const About = () => {
               &apos;JavaScript from Beginner to Professional&apos;
             </span>{" "}
             plus others. I have an itch for learning new things and always love
-            a good challenge. I know I&apos;m new and my challenges right now
-            are on the junior side of this career, but the satisfaction of
-            figuring something out without a straight forward tutorial is the
-            best and most rewarding feeling. Thanks for visiting and I would
-            love to talk!{" "}
+            a good challenge. The satisfaction of solving problems without a
+            straight forward tutorial or AI is the best and most rewarding
+            feeling. Thanks for visiting and I would love to connect!{" "}
           </p>
           <div className="p-4 bg-neutral-950">
             <Image
