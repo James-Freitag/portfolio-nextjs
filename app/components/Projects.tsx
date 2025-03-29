@@ -79,7 +79,7 @@ const Projects = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="bg-neutral-950 border border-gray-400 p-4 items-center grid grid-cols-3 gap-4"
+              className="bg-neutral-950 border border-gray-400 p-4 items-center grid grid-cols-1 md:grid-cols-3 gap-4"
             >
               <div className="flex flex-col">
                 <p className="text-lg text-center font-semibold mb-2">
